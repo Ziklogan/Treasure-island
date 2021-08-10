@@ -1,0 +1,22 @@
+print("Welcome to treasure Island")
+print('Your mission is to find the Treasures')
+
+pick = input(" you're at a T-junction, where do you want to go? Type 'R' or 'L' ").lower()
+
+if pick == "r":
+    # the game will continue since r is the correct direction 
+    pick1 = input(" you have arrived at a river? there is a boat at the bank. do you want to cross. Type 'cross' to row the boat across. and 'return' to go back?").lower()
+    
+    if pick1 == "cross":
+        # arrived at the island and you met some stranger 
+        arrived_at_the_island = input("you got to the island, you met a stranger. and he/she asked for water. type 'yes' if you gave them water and 'no' if you passed them.").lower()
+        if arrived_at_the_island == "yes":
+            print(" you found the treasure! You Win")
+        else:
+            print("you ignored the person in charge of the treasure room!You lost")
+    else:
+        print("you choose to return and die on the way due to lack of water! You lost the Game.")
+elif pick == "l":
+    print("you got into a trap and died! You lost")
+else:
+    print("you lost the game! invalid user input")
